@@ -23,3 +23,20 @@ function deleteRow(button) {
     let row = button.parentElement.parentElement;
     row.remove();
 }
+function getRandomInteger(min, max) {
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+function generatePassword(){
+    const length = getRandomInteger(8,100);
+    const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*(){}[]|/.,<>';
+    let password = '';
+    for (let i = 0; i < length; i++) {
+        password += characters[getRandomInteger(0,characters.length)];
+    }
+    return password
+}
+
+document.querySelector('.generatepassword-button').onclick=function(){
+    document.getElementById("password").value=""
+    document.getElementById("password").value=generatePassword();
+}
