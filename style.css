@@ -20,7 +20,7 @@ form {
     background: #1e1e1e;
     padding: 15px;
     border-radius: 8px;
-    display: flex;
+    display: block;
     gap: 10px;
     width: 100%;
     max-width: 500px;
@@ -31,7 +31,10 @@ input, button {
     border-radius: 5px;
 }
 input {
-    flex: 1;
+    display:block;
+    margin-top:8px;
+    margin-bottom:8px;
+    width:100%;
     background: #333;
     color: #e0e0e0;
 }
