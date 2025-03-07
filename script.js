@@ -12,18 +12,12 @@ document.getElementById("passwordForm").addEventListener("submit", function(even
         <td>${username}</td>
         <td><input type="password" value="${password}" readonly></td>
         <td class="actions">
-            <button onclick="togglePassword(this)">👁</button> 
             <button onclick="deleteRow(this)">❌</button>
         </td>
     `;
 
     document.getElementById("passwordForm").reset();
 });
-
-function togglePassword(button) {
-    let input = button.parentElement.parentElement.cells[2].querySelector("input");
-    input.type = input.type === "password" ? "text" : "password";
-}
 
 function deleteRow(button) {
     let row = button.parentElement.parentElement;
